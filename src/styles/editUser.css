@@ -1,0 +1,107 @@
+/* Overlay to darken background */
+.edit-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darker background */
+    z-index: 999;
+  }
+  
+  /* Centered edit modal container */
+  .edit-user-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    max-width: 90%;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-top: 5px solid #4caf50;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  /* Form title */
+  .edit-user-container h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Form inputs */
+  .edit-form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  /* Focus effect on input fields */
+  .edit-form input:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+  }
+  
+  /* Update button */
+  .btn-update {
+    width: 100%;
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: #fff;
+    padding: 12px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Button hover effect */
+  .btn-update:hover {
+    background: linear-gradient(135deg, #45a049, #4caf50);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+  }
+  
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4b2b;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .close-btn:hover {
+    background: #ff2e2e;
+  }
+  
